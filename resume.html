@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justine C. Carcueva - Professional Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    background:#eef2f7;
+    font-family:'Inter',sans-serif;
+    color:#1f2937;
+    padding:20px 10px;
+}
+.resume{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+.header{
+    background:#0f172a;
+    color:white;
+    padding:25px 30px;
+}
+.name{
+    font-size:32px;
+    font-weight:800;
+}
+.role{
+    margin-top:6px;
+    color:#cbd5e1;
+    font-size:14px;
+    font-weight:500;
+}
+.contact{
+    margin-top:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    font-size:11px;
+}
+
+.content{
+    display:grid;
+    grid-template-columns:280px 1fr;
+}
+
+.sidebar{
+    background:#f8fafc;
+    padding:20px;
+    border-right:1px solid #e5e7eb;
+}
+
+.main{
+    padding:25px;
+}
+
+.section{
+    margin-bottom:20px;
+}
+
+.section h2{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:#0f172a;
+    margin-bottom:8px;
+    padding-bottom:5px;
+    border-bottom:1.5px solid #e5e7eb;
+}
+
+/* Two column layout for skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.skill{
+    background:#e2e8f0;
+    padding:4px 8px;
+    border-radius:15px;
+    font-size:10px;
+    font-weight:600;
+    text-align:center;
+}
+
+.summary{
+    line-height:1.5;
+    font-size:11px;
+    color:#374151;
+}
+
+.project{
+    border-left:3px solid #0f172a;
+    padding-left:12px;
+    margin-bottom:16px;
+}
+
+.project h3{
+    font-size:14px;
+    margin-bottom:3px;
+}
+
+.project h3 a{
+    color:#0f172a;
+    text-decoration:none;
+}
+
+.project h3 a:hover{
+    text-decoration:underline;
+}
+
+.meta{
+    color:#6b7280;
+    font-size:10px;
+    margin-bottom:4px;
+}
+
+.stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+    margin-bottom:8px;
+}
+
+.stack span{
+    background:#f1f5f9;
+    border:1px solid #e2e8f0;
+    padding:2px 8px;
+    border-radius:12px;
+    font-size:9px;
+    font-weight:600;
+    color:#475569;
+}
+
+ul{
+    padding-left:16px;
+    line-height:1.5;
+    font-size:10px;
+}
+
+.card{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:8px;
+    padding:10px;
+    font-size:10px;
+}
+
+.links{
+    margin-top:6px;
+    font-size:10px;
+    color:#2563eb;
+    word-break:break-all;
+}
+
+@media print {
+    body{
+        background:white;
+        padding:0;
+        margin:0;
+    }
+    .resume{
+        box-shadow:none;
+        max-width:100%;
+    }
+    .skill{
+        background:#e2e8f0;
+        print-color-adjust:exact;
+        -webkit-print-color-adjust:exact;
+    }
+    .header{
+        print-color-adjust:exact;
+        -webkit-print-color-adjust:exact;
+    }
+}
+
+@media(max-width:800px){
+    .content{
+        grid-template-columns:1fr;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="resume">
+
+<div class="header">
+<div class="name">JUSTINE C. CARCUEVA</div>
+<div class="role">Full-Stack Developer</div>
+
+<div class="contact">
+<span>📍 Caloocan City, Philippines</span>
+<span>📞 09569673935</span>
+<span>✉ enodd.coding.20@gmail.com</span>
+</div>
+</div>
+
+<div class="content">
+
+<div class="sidebar">
+
+<div class="section">
+<h2>Programming Languages</h2>
+<div class="skills-grid">
+<span class="skill">PHP</span>
+<span class="skill">JavaScript</span>
+<span class="skill">TypeScript</span>
+<span class="skill">Python</span>
+<span class="skill">Kotlin</span>
+</div>
+</div>
+
+<div class="section">
+<h2>Skills</h2>
+<div class="skills-grid">
+<span class="skill">Web Development</span>
+<span class="skill">Desktop Development</span>
+<span class="skill">Android Development</span>
+<span class="skill">Database Management</span>
+<span class="skill">UI/UX Design</span>
+<span class="skill">Testing & Debugging</span>
+<span class="skill">System Maintenance</span>
+<span class="skill">System Automation</span>
+<span class="skill">Machine Learning</span>
+<span class="skill">AI Integration</span>
+<span class="skill">CodeIgniter</span>
+<span class="skill">GitHub</span>
+<span class="skill">Technical Writing</span>
+<span class="skill">User Documentation</span>
+</div>
+</div>
+
+<div class="section">
+<h2>Development Tools</h2>
+<div class="skills-grid">
+<span class="skill">Cursor</span>
+<span class="skill">Git</span>
+</div>
+</div>
+
+<div class="section">
+<h2>Education</h2>
+<div class="card">
+<strong>Bachelor of Science in Information Technology</strong><br><br>
+System Plus Computer College<br><br>
+Graduated: May 16, 2026
+</div>
+</div>
+
+<div class="section">
+<h2>Languages</h2>
+<div class="card">
+English – Professional Working Proficiency<br><br>
+Filipino – Fluent
+</div>
+</div>
+
+<div class="section">
+<h2>Achievement</h2>
+<div class="card">
+<strong>Outstanding System Developer</strong><br><br>
+System Plus Computer College • 2026
+</div>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="section">
+<h2>Professional Summary</h2>
+<div class="summary">
+Software Developer with experience building web and desktop applications from concept to deployment, as well as Android applications from concept to working APK. Experienced with PHP, JavaScript, TypeScript, Python, and Kotlin, as well as database management, UI/UX design, and troubleshooting. Understands the full development lifecycle including modern build pipelines. Leverages modern AI-assisted development workflows to improve productivity and accelerate delivery. Experienced leading projects, implementing machine learning solutions, and delivering systems used by real people.
+</div>
+</div>
+
+<div class="section">
+<h2>Project Experience</h2>
+
+<div class="project">
+<h3>EDC Browser</h3>
+<div class="meta">Desktop Browser Application • Developer • Mar 2026 – Present</div>
+<div class="stack">
+<span>TypeScript</span><span>Electron</span><span>Node.js</span>
+</div>
+<ul>
+<li>Developed and deployed a desktop browser application with an active user base.</li>
+<li>Built productivity-focused browser features for traders and developers.</li>
+</ul>
+<div class="links">https://enoddedc.github.io/EDC-Browser/</div>
+</div>
+
+<div class="project">
+<h3>ENOBIT</h3>
+<div class="meta">Trading & Rewards Platform • Developer • Jan 2026 – Present</div>
+<div class="stack">
+<span>PHP</span><span>MySQL</span><span>JavaScript</span>
+</div>
+<ul>
+<li>Built user engagement and reward tracking systems.</li>
+<li>Generated $2,000 USDT in affiliate commission within the first two months (February–March 2026) from user trading activity.</li>
+</ul>
+<div class="links">https://enobit-app.iceiy.com/</div>
+</div>
+
+<div class="project">
+<h3>INTELEVO</h3>
+<div class="meta">Machine Learning Capstone Project • Team Lead • Jul 2025 – May 2026</div>
+<div class="stack">
+<span>Next.js</span><span>MongoDB</span><span>Python</span><span>JavaScript</span>
+</div>
+<ul>
+<li>Designed and implemented a machine learning-powered adaptive learning management system.</li>
+<li>Applied machine learning techniques to personalize educational content and assessments.</li>
+<li>Led planning, development, testing, integration, and deployment activities.</li>
+</ul>
+<div class="links">https://assistive-learning-platform-ce54.onrender.com/</div>
+</div>
+
+<div class="project">
+<h3>School Grading System</h3>
+<div class="meta">On-the-Job Training Project • Jan 2026 – May 2026</div>
+<div class="stack">
+<span>React</span><span>Node.js</span><span>PostgreSQL</span>
+</div>
+<ul>
+<li>Co-developed a complete grading system turned over to the institution upon project completion.</li>
+<li>Handled frontend and backend development responsibilities.</li>
+<li>Participated in testing, deployment, and maintenance activities.</li>
+<li>Assisted in preparing user documentation and technical guides.</li>
+</ul>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Additional Information</h2>
+<div class="skills-grid">
+<span class="skill">Android Build Pipeline</span>
+<span class="skill">Onsite / Hybrid / Shifting</span>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
