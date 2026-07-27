@@ -151,6 +151,30 @@ section.content{padding:125px 0}
 .orb{position:absolute;width:150px;height:150px;border-radius:50%;right:-40px;bottom:-55px;background:var(--blue);filter:blur(1px)}
 .orb:before{content:"";position:absolute;width:90px;height:90px;border:1px solid #fff;border-radius:50%;top:28px;left:28px}
 .skill-stat{font:800 72px var(--display);letter-spacing:-.07em;color:var(--orange)}
+.stack-console{display:grid;grid-template-columns:310px 1fr;border:1.5px solid #555650;background:#17181b;min-height:600px;box-shadow:10px 10px 0 var(--acid)}
+.stack-nav{border-right:1.5px solid #555650;display:flex;flex-direction:column}
+.stack-nav-head{padding:22px 24px;border-bottom:1.5px solid #555650;color:#9b9c96;display:flex;justify-content:space-between}
+.stack-tab{flex:1;border:0;border-bottom:1px solid #393a3e;background:transparent;color:#8e8f89;padding:20px 24px;text-align:left;cursor:pointer;display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:8px;transition:.25s}
+.stack-tab:last-child{border-bottom:0}.stack-tab:hover{color:#fff;padding-left:29px}.stack-tab.active{background:var(--acid);color:var(--ink)}
+.stack-tab b{font:500 10px var(--mono)}.stack-tab strong{font:600 17px var(--display)}.stack-tab i{font-style:normal;font-size:18px;opacity:0;transform:translateX(-8px);transition:.25s}.stack-tab.active i{opacity:1;transform:none}
+.stack-stage{position:relative;overflow:hidden}
+.stack-stage:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px}
+.stack-panel{display:none;position:relative;z-index:1;padding:52px;min-height:100%;animation:panel-in .45s var(--ease)}
+.stack-panel.active{display:flex;flex-direction:column}
+@keyframes panel-in{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+.stack-panel-top{display:flex;justify-content:space-between;gap:20px;align-items:start;padding-bottom:28px;border-bottom:1px solid #45464a}
+.stack-panel h3{font:700 clamp(38px,4.5vw,66px)/.95 var(--display);letter-spacing:-.055em;max-width:650px}
+.stack-panel h3 span{color:var(--acid)}
+.stack-panel-copy{color:#9b9c96;font-size:13px;line-height:1.7;max-width:310px}
+.tech-cloud{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.tech{min-height:112px;border:1px solid #4a4b50;background:#1d1e22;padding:17px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:.3s var(--ease)}
+.tech:after{content:"";position:absolute;right:-25px;bottom:-25px;width:70px;height:70px;border:1px solid #494a4f;border-radius:50%}
+.tech:hover{background:var(--paper);color:var(--ink);border-color:var(--paper);transform:translateY(-4px)}
+.tech-mark{font:700 23px var(--display);letter-spacing:-.04em}.tech small{font:9px var(--mono);text-transform:uppercase;letter-spacing:.07em;color:#8e8f89}.tech:hover small{color:#555}
+.stack-panel-foot{margin-top:auto;padding-top:30px;display:flex;justify-content:space-between;align-items:end;gap:20px}
+.stack-panel-foot p{font:10px var(--mono);color:#8e8f89;text-transform:uppercase;letter-spacing:.08em}
+.stack-signal{display:flex;align-items:end;gap:5px;height:30px}.stack-signal i{display:block;width:6px;background:var(--acid);animation:signal 1.1s ease-in-out infinite alternate}.stack-signal i:nth-child(1){height:9px}.stack-signal i:nth-child(2){height:17px;animation-delay:.2s}.stack-signal i:nth-child(3){height:25px;animation-delay:.4s}.stack-signal i:nth-child(4){height:14px;animation-delay:.6s}
+@keyframes signal{to{height:30px}}
 
 /* ABOUT */
 .about-layout{display:grid;grid-template-columns:.8fr 1.2fr;border:2px solid var(--line)}
@@ -182,6 +206,7 @@ footer{padding:34px 0 40px;display:flex;justify-content:space-between;gap:20px;f
   .hero-grid{grid-template-columns:1fr}.hero-side{border-left:0;border-top:2px solid var(--line);display:grid;grid-template-columns:1fr 1fr}.build-console{min-height:360px;grid-row:span 2}
   .hero-bottom{grid-template-columns:1fr}.project{grid-template-columns:1fr;grid-template-areas:"media" "main" "story"}.project-media{border-right:0;border-bottom:2px solid var(--line);min-height:480px}.project-story{border-top:2px solid var(--line)}
   .skill-card.large{grid-column:span 7}.skill-card.medium{grid-column:span 5}.skill-card.small{grid-column:span 5}.skill-card.wide{grid-column:span 7}
+  .stack-console{grid-template-columns:250px 1fr}.stack-panel{padding:38px}.stack-panel-top{flex-direction:column}.tech-cloud{grid-template-columns:repeat(2,1fr)}
   .about-layout{grid-template-columns:1fr}.about-left{border-right:0;border-bottom:2px solid var(--line);min-height:380px}
 }
 @media(max-width:720px){
@@ -191,6 +216,7 @@ footer{padding:34px 0 40px;display:flex;justify-content:space-between;gap:20px;f
   section.content{padding:90px 0}.section-head{grid-template-columns:1fr;gap:20px;margin-bottom:42px}.section-title{font-size:46px}
   .project{grid-template-columns:1fr;min-height:0}.project-media{min-height:330px;padding:16px}.browser{min-height:290px;height:100%}.project-num{padding:8px}.project-main{padding:30px 22px 24px}.project-story{padding:25px 85px 30px 22px}.project-arrow{right:16px;bottom:16px}.other-work{grid-template-columns:1fr}
   .skill-grid{display:flex;flex-direction:column}.skill-card{min-height:180px}
+  .stack-console{display:block;min-height:0;box-shadow:6px 6px 0 var(--acid)}.stack-nav{border-right:0;border-bottom:1.5px solid #555650;display:grid;grid-template-columns:1fr 1fr}.stack-nav-head{grid-column:1/-1}.stack-tab{min-height:70px;padding:14px;grid-template-columns:25px 1fr}.stack-tab i{display:none}.stack-tab:nth-child(even){border-right:1px solid #393a3e}.stack-panel{padding:30px 20px}.stack-panel h3{font-size:38px}.tech-cloud{grid-template-columns:1fr 1fr}.tech{min-height:98px}
   .about-right{grid-template-columns:1fr}.fact,.fact:nth-child(odd){border-right:0;border-bottom:2px solid var(--line)}.fact:last-child{border-bottom:0}.about-left{padding:32px;min-height:340px}
   .contact-box{padding:48px 24px}.contact-bottom{align-items:stretch;flex-direction:column}.contact-actions{width:100%}.contact-actions .btn{width:100%}
   footer{flex-direction:column}
@@ -318,18 +344,42 @@ footer{padding:34px 0 40px;display:flex;justify-content:space-between;gap:20px;f
       <div class="section-no">02 / Capabilities</div>
       <h2 class="section-title">Built across the <em>whole stack.</em></h2>
     </div>
-    <div class="skill-grid reveal">
-      <div class="skill-card large"><span class="mono">Core languages</span><h3>Where ideas become instructions.</h3><div class="code-stack">
-        <div class="code-line"><span>JavaScript</span><div class="meter"><i style="width:94%"></i></div></div>
-        <div class="code-line"><span>TypeScript</span><div class="meter"><i style="width:90%"></i></div></div>
-        <div class="code-line"><span>PHP</span><div class="meter"><i style="width:92%"></i></div></div>
-        <div class="code-line"><span>Python</span><div class="meter"><i style="width:82%"></i></div></div>
-        <div class="code-line"><span>Kotlin</span><div class="meter"><i style="width:76%"></i></div></div>
-      </div></div>
-      <div class="skill-card medium"><span class="mono">Surfaces</span><h3>Web, desktop & Android</h3><div class="tags"><span>React</span><span>Next.js</span><span>Electron</span><span>UI/UX</span></div><div class="orb"></div></div>
-      <div class="skill-card small"><span class="mono">Shipped</span><div class="skill-stat">6+</div><p>Completed products spanning several platforms.</p></div>
-      <div class="skill-card small"><span class="mono">Systems</span><h3>Backend & data</h3><div class="tags"><span>Node</span><span>MySQL</span><span>MongoDB</span><span>Postgres</span></div></div>
-      <div class="skill-card wide"><span class="mono">Beyond CRUD</span><h3>Machine learning, AI integration & automation.</h3><p>I build features that reduce manual work, adapt to users, and turn raw information into useful outcomes.</p></div>
+    <div class="stack-console reveal">
+      <div class="stack-nav">
+        <div class="stack-nav-head mono"><span>Capability index</span><span>05 modes</span></div>
+        <button class="stack-tab active" data-stack="frontend"><b>01</b><strong>Frontend</strong><i>→</i></button>
+        <button class="stack-tab" data-stack="backend"><b>02</b><strong>Backend</strong><i>→</i></button>
+        <button class="stack-tab" data-stack="data"><b>03</b><strong>Data</strong><i>→</i></button>
+        <button class="stack-tab" data-stack="apps"><b>04</b><strong>Applications</strong><i>→</i></button>
+        <button class="stack-tab" data-stack="intelligence"><b>05</b><strong>Intelligence</strong><i>→</i></button>
+      </div>
+      <div class="stack-stage">
+        <article class="stack-panel active" data-panel="frontend">
+          <div class="stack-panel-top"><h3>Interfaces that feel <span>fast & intentional.</span></h3><p class="stack-panel-copy">Responsive, accessible experiences built from reusable components and connected to real product logic.</p></div>
+          <div class="tech-cloud"><div class="tech"><span class="tech-mark">React</span><small>Component UI</small></div><div class="tech"><span class="tech-mark">Next.js</span><small>Full-stack web</small></div><div class="tech"><span class="tech-mark">JavaScript</span><small>Interaction</small></div><div class="tech"><span class="tech-mark">TypeScript</span><small>Type safety</small></div><div class="tech"><span class="tech-mark">HTML / CSS</span><small>Web foundation</small></div><div class="tech"><span class="tech-mark">UI / UX</span><small>Product design</small></div></div>
+          <div class="stack-panel-foot"><p>Mode 01 · Client surface</p><div class="stack-signal"><i></i><i></i><i></i><i></i></div></div>
+        </article>
+        <article class="stack-panel" data-panel="backend">
+          <div class="stack-panel-top"><h3>Reliable logic behind <span>every interaction.</span></h3><p class="stack-panel-copy">APIs, authentication, business rules, integrations, and server workflows designed around maintainability.</p></div>
+          <div class="tech-cloud"><div class="tech"><span class="tech-mark">Node.js</span><small>Server runtime</small></div><div class="tech"><span class="tech-mark">PHP</span><small>Web backend</small></div><div class="tech"><span class="tech-mark">REST APIs</span><small>Integration layer</small></div><div class="tech"><span class="tech-mark">Auth</span><small>Access control</small></div><div class="tech"><span class="tech-mark">Testing</span><small>Quality control</small></div><div class="tech"><span class="tech-mark">Deployment</span><small>Production delivery</small></div></div>
+          <div class="stack-panel-foot"><p>Mode 02 · Server systems</p><div class="stack-signal"><i></i><i></i><i></i><i></i></div></div>
+        </article>
+        <article class="stack-panel" data-panel="data">
+          <div class="stack-panel-top"><h3>Structured data, <span>useful outcomes.</span></h3><p class="stack-panel-copy">Relational and document databases modeled for clear queries, dependable storage, and evolving applications.</p></div>
+          <div class="tech-cloud"><div class="tech"><span class="tech-mark">MySQL</span><small>Relational</small></div><div class="tech"><span class="tech-mark">PostgreSQL</span><small>Relational</small></div><div class="tech"><span class="tech-mark">MongoDB</span><small>Document data</small></div><div class="tech"><span class="tech-mark">SQL</span><small>Queries</small></div><div class="tech"><span class="tech-mark">Schema design</span><small>Data modeling</small></div><div class="tech"><span class="tech-mark">Analytics</span><small>Product insight</small></div></div>
+          <div class="stack-panel-foot"><p>Mode 03 · Persistence layer</p><div class="stack-signal"><i></i><i></i><i></i><i></i></div></div>
+        </article>
+        <article class="stack-panel" data-panel="apps">
+          <div class="stack-panel-top"><h3>Products beyond the <span>browser tab.</span></h3><p class="stack-panel-copy">Cross-platform desktop and native Android applications built around practical, focused workflows.</p></div>
+          <div class="tech-cloud"><div class="tech"><span class="tech-mark">Electron</span><small>Desktop apps</small></div><div class="tech"><span class="tech-mark">Kotlin</span><small>Native Android</small></div><div class="tech"><span class="tech-mark">Node.js</span><small>Desktop engine</small></div><div class="tech"><span class="tech-mark">APK delivery</span><small>Mobile shipping</small></div><div class="tech"><span class="tech-mark">Hot reload</span><small>Developer tooling</small></div><div class="tech"><span class="tech-mark">Productivity</span><small>Workflow design</small></div></div>
+          <div class="stack-panel-foot"><p>Mode 04 · Device software</p><div class="stack-signal"><i></i><i></i><i></i><i></i></div></div>
+        </article>
+        <article class="stack-panel" data-panel="intelligence">
+          <div class="stack-panel-top"><h3>Software that can <span>adapt & automate.</span></h3><p class="stack-panel-copy">Machine-learning and automation features that personalize experiences and remove repetitive work.</p></div>
+          <div class="tech-cloud"><div class="tech"><span class="tech-mark">Python</span><small>ML foundation</small></div><div class="tech"><span class="tech-mark">Machine Learning</span><small>Adaptive systems</small></div><div class="tech"><span class="tech-mark">AI integration</span><small>Smart features</small></div><div class="tech"><span class="tech-mark">Automation</span><small>Process design</small></div><div class="tech"><span class="tech-mark">Web scraping</span><small>Data collection</small></div><div class="tech"><span class="tech-mark">Personalization</span><small>User adaptation</small></div></div>
+          <div class="stack-panel-foot"><p>Mode 05 · Intelligent layer</p><div class="stack-signal"><i></i><i></i><i></i><i></i></div></div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
@@ -394,6 +444,14 @@ function fitPreview(screen){
 document.querySelectorAll(".browser-screen").forEach(screen=>{
   fitPreview(screen);
   new ResizeObserver(()=>fitPreview(screen)).observe(screen);
+});
+
+document.querySelectorAll(".stack-tab").forEach(tab=>{
+  tab.addEventListener("click",()=>{
+    document.querySelectorAll(".stack-tab,.stack-panel").forEach(item=>item.classList.remove("active"));
+    tab.classList.add("active");
+    document.querySelector(`[data-panel="${tab.dataset.stack}"]`).classList.add("active");
+  });
 });
 </script>
 </body>
